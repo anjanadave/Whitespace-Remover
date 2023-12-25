@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitespace Remover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="main">
+        <h1>Whitespace Remover</h1>
+        <label for="enter" class="enter">Enter text:</label><br>
+        <input type="text" class="name" id="inputText"><br>
+        <button type="button" onclick="removeWhitespaces()">Remove Whitespaces</button>
+        <p id="result"></p>
+     </div>
+
+     <script>
+        function removeWhitespaces(){
+           var inputElement = document.getElementById('inputText').value;
+           var resultElement = document.getElementById('result');
+
+           var result = inputElement.replace(/\s/g, '');
+
+           resultElement.textContent = 'Result: ' + result;
+        }
+     </script>
+</body>
+</html>
